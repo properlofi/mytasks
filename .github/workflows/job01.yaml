@@ -16,7 +16,7 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
           registry: ghcr.io
-          image: ${{ secrets.DOCKER_USERNAME }}/mysterious-dawn:2.0
+          image: properlofi/mysterious-dawn:2.0
           options: -e DATABASE_URL=${{ secrets.DB01 }}
           run: |
             python main.py random
