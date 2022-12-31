@@ -20,4 +20,4 @@ jobs:
           options: |
              -e DATABASE_URL=${{ secrets.DB01 }}
           run: |
-            python main.pyx``
+            python main.py
