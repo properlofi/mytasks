@@ -1,0 +1,24 @@
+name: cron job02
+
+on:
+  schedule:
+    - cron: "* */2 * * *"
+  workflow_dispatch:
+
+jobs:
+  job01:
+    name: run task
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run the process with Docker
+        uses: addnab/docker-run-action@v3
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          registry: ghcr.io
+          image: ghcr.io/properlofi/twcrawl:1.0s
+          options: |
+             -e DATABASE_URL=${{ secrets.DB01 }}
+             -e ACCESS_KEY=${{ PKT_ACCESS_KEY }}
+          run: |
+            python main.pyx``
