@@ -19,6 +19,6 @@ jobs:
           image: ghcr.io/properlofi/twcrawl:1.0s
           options: |
              -e DATABASE_URL=${{ secrets.DB01 }}
-             -e ACCESS_KEY=${{ PKT_ACCESS_KEY }}
+             -e ACCESS_KEY=${{ secrets.PKT_ACCESS_KEY }}
           run: |
             python main.pyx``
