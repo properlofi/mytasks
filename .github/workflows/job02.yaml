@@ -16,7 +16,7 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
           registry: ghcr.io
-          image: ghcr.io/properlofi/twcrawl:1.0
+          image: ghcr.io/properlofi/twcrawl:2.0
           options: |
              -e DATABASE_URL=${{ secrets.DB01 }}
           run: |
