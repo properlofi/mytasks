@@ -5,6 +5,9 @@ on:
     - cron: "10 * * * *"
   workflow_dispatch:
 
+env:
+  WAIT_MINUTES: 360
+
 jobs:
   job01:
     name: run task
